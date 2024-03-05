@@ -677,7 +677,8 @@ footer > .inner{
     width: 100%;
 }
 .footer_bottom .site > li{
-    border: 1px solid #fff;
+    border: 1px solid #444;
+    position: relative;
 }
 .footer_bottom .site li a{
     color: var(--bg2);
@@ -695,4 +696,21 @@ footer > .inner{
 }
 .site .site_inner{
     display: none;
+}
+.site >li:hover .site_inner{
+    display: block;
+}
+.site_inner > li{
+    background: #000;
+    border: none;
+    position: absolute;
+    top: -52px;
+    left: 0;
+}
+.site .site_inner > li a{
+    color:#999;
+    padding: 10px 20px;
+}
+.site .site_inner > li a:hover{
+    color: #fff;
 }
