@@ -55,7 +55,7 @@ table {
 html{
     font-size: 62.5%;
     line-height: 1.75;
-    font-family: 'SCoreDream', sans-serif;
+    font-family: 'SCoreDream','Pretendard', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -73,7 +73,7 @@ html{
     --primary1:#228eff;
     --primary2:#f25f82;
     --primary3:#f58021;
-    --primary4:#023799;
+    --primary4:#00349d;
     --text1:#222222;
     --text2:#c6c6c6;
     --bg:#333333;

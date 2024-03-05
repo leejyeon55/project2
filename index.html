@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>국가정신건강정보포털</title>
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -106,11 +106,17 @@
                             <div class="slide4"></div>
                             <div class="slide5"></div>
                             <div class="slide6"></div>
+                            <div class="popupzone">
+                                <p>팝업존</p>
+                            </div>
                         </div>
-                        <div class="popupzone"></div>
                     </div>
                     <div class="section1_content">
                         <div class="search">
+                            <label for="searchData"></label>
+                            <input type="text" name="searchData" class="search_box" placeholder="정신건강 정보를 찾아보세요."
+                            title="검색어 입력">
+                            <input type="submit" value="검색" class="search_btn">
                         </div>
                         <div class="cardbox1 df">
                             <div class="card1">
@@ -125,11 +131,13 @@
                             </div>
                         </div>
                         <div class="cardbox2 df">
-                            <div class="card3">
+                            <div class="card3 df">
+                                <img src="./imgs/main_quick_card03.png" alt="icon">
                                 <a href="#"><p>정신건강 질환별 정보</p></a>
                             </div>
-                            <div class="card4">
-                                <a href="#">정신건강관련기관</a>
+                            <div class="card4 df">
+                                <img src="./imgs/main_quick_card04.png" alt="icon">
+                                <a href="#"><p>정신건강관련기관</p></a>
                             </div>
                         </div>
                     </div>
@@ -138,38 +146,78 @@
             <div class="section2">
                 <div class="inner df">
                     <div class="section2_txt">
-                        <h3>실생활 정신건강 <span>정보</span></h3>
-                        <p>실생활에 필요한 정신건강에 관련된 정보<span>를<br> 분야별로 빠르게 찾아보세요.</span></p>
+                        <h3><b>실생활 정신건강</b> 정보</h3>
+                        <p><b>실생활에 필요한 정신건강에 관련된 정보</b>를<br> 분야별로 빠르게 찾아보세요.</p>
                     </div>
                     <div class="contentbox">
-                        <ul class="df">
-                            <li><a href="#">카드뉴스</a></li>
-                            <li><a href="#">웹툰</a></li>
-                            <li><a href="#">동영상</a></li>
-                            <li><a href="#">통계</a></li>
-                        </ul>
-                        <ul class="df">
-                            <li><a href="#">도움이 되는 정보</a></li>
-                            <li><a href="#">칼럼</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">약정보</a></li>
+                        <ul class="icons df">
+                            <li>
+                                <a href="#">
+                                    <img src="./imgs/main_sec02_icon01.png" alt=""><p>카드뉴스</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./imgs/main_sec02_icon02.png" alt=""><p>웹툰</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./imgs/main_sec02_icon03.png" alt=""><p>동영상</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./imgs/main_sec02_icon04.png" alt=""><p>통계</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./imgs/main_sec02_icon05.png" alt=""><p>도움이 되는 정보</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./imgs/main_sec02_icon06.png" alt=""><p>칼럼</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./imgs/main_sec02_icon07.png" alt=""><p>FAQ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./imgs/main_sec02_icon08.png" alt=""><p>약정보</p>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="section3 inner df">
-                <div class="sub_banner df">
-                        <div class="top">
+                <div class="sub_banner">
+                        <div class="top df">
                             <div class="text">
-                                <h3>인식개선<span>정보</span></h3>
+                                <h3><b>인식개선</b>정보</h3>
                             </div>
-                            <div class="bar"></div>
+                            <div class="bar df">
+                                <div class="prev"><i class="fa-solid fa-angle-left"></i></div>
+                                <div class="next"><i class="fa-solid fa-angle-right"></i></div>
+                            </div>
                         </div>
-                        <div class="bottom"></div>
+                        <div class="bottom">
+                            <div class="slide">
+                                <div class="slide1"></div>
+                                <div class="slide2"></div>
+                                <div class="slide3"></div>
+                                <div class="slide4"></div>
+                            </div>
+                        </div>
                 </div>
                 <div class="news">
                         <div class="notice_txt">
-                            <h3>정신건강포털<span>새소식</span></h3>
+                            <h3>정신건강포털 <b>새소식</b></h3>
                         </div>
                         <div class="notice df">
                             <div class="day">
@@ -191,17 +239,31 @@
             <div class="section4">
                 <div class="inner df">
                     <div class="section4_txt">
-                        <P>정신건강관련<span>기관</span></P>
+                        <h3>정신건강관련 <b>기관</b></h3>
                         <p>원하는 기관의 정보를 확인해보세요.</p>
                     </div>
                     <ul class="iconbox df">
-                        <li><a href="#">정신건강정보신청</a></li>
-                        <li><a href="#">정신건강복지센터</a></li>
-                        <li><a href="#">자살예방센터</a></li>
-                        <li><a href="#">중독관리통합지원센터</a></li>
-                        <li><a href="#">정신요양시설</a></li>
-                        <li><a href="#">정신의료기관</a></li>
-                        <li><a href="#">기관지도찾기</a></li>
+                        <li><a href="#">
+                            <div class="icon"><img src="./imgs/main_sec04_icon01.png" alt="icon"></div>
+                        </a><p>정신건강정보신청</p></li>
+                        <li><a href="#">
+                            <div class="icon"><img src="./imgs/main_sec04_icon02.png" alt="icon"></div>
+                        </a><p>정신건강복지센터</p></li>
+                        <li><a href="#">
+                            <div class="icon"><img src="./imgs/main_sec04_icon03.png" alt="icon"></div>
+                        </a><p>자살예방센터</p></li>
+                        <li><a href="#">
+                            <div class="icon"><img src="./imgs/main_sec04_icon04.png" alt="icon"></div>
+                        </a><p>중독관리통합<br>지원센터</p></li>
+                        <li><a href="#">
+                            <div class="icon"><img src="./imgs/main_sec04_icon05.png" alt="icon"></div>
+                        </a><p>정신요양시설</p></li>
+                        <li><a href="#">
+                            <div class="icon"><img src="./imgs/main_sec04_icon06.png" alt="icon"></div>
+                        </a><p>정신의료기관</p></li>
+                        <li><a href="#">
+                            <div class="icon"><img src="./imgs/main_sec04_icon07.png" alt="icon"></div>
+                        </a><p>기관지도찾기</p></li>
                     </ul>
                 </div>
             </div>
@@ -227,12 +289,11 @@
                         </div>
                     </div>
                     <ul class="site">
-                        <li><a href="#">관련사이트</a></li>
-                        <div class="site_inner">
-                            <ul>
+                        <li><a>관련사이트<i class="fa-solid fa-chevron-up"></i></a>
+                            <ul class="site_inner">
                                 <li><a href="#">보건복지부-국립정신건강센터</a></li>
                             </ul>
-                        </div>
+                        </li>
                     </ul>
                 </div>
             </div>
