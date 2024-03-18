@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="icon" href="./imgs/logo_img.png" type="image/x-icon">
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+
 <body>
     <div class="wrap">
         <header>
@@ -18,78 +21,91 @@
                 </ul>
             </div>
             <div class="gnb_area">
-                <div class="gnb">
-                    <ul class="logo1">
-                        <li><a href="#"><h1>logo</h1></a></li>
-                    </ul>
+                <div class="w100"></div>
+                <div class="gnb df inner">
+                    <h1 class="logo1">
+                        <a href="#">logo</a>
+                    </h1>
                     <nav class="df">
                         <ul class="main_nav df">
                             <li class="dep1">
-                                <a href="#"><h3>자가검진</h3></a>
-                            <div class="dep_inner">
-                                <ul class="dep2">
-                                    <li><a href="#">생애주기별 자가검진</a></li>
-                                    <li><a href="#">질환별 자가검진</a></li>
-                                </ul>
-                            </div>
+                                <a href="#">
+                                    <h3>자가검진</h3>
+                                </a>
+                                <div class="dep_inner">
+                                    <ul class="dep2">
+                                        <li><a href="#">생애주기별 자가검진</a></li>
+                                        <li><a href="#">질환별 자가검진</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <!-- dep1 -->
                             <li class="dep1">
-                                <a href="#"><h3>정신건강정보</h3></a>
-                            <div class="dep_inner">
-                                <ul class="dep2">
-                                    <li><a href="#">질환별 정보</a></li>
-                                    <li><a href="#">자주찾는질문(FAQ)</a></li>
-                                    <li><a href="#">약 정보</a></li>
-                                </ul>
-                            </div>
+                                <a href="#">
+                                    <h3>정신건강정보</h3>
+                                </a>
+                                <div class="dep_inner">
+                                    <ul class="dep2">
+                                        <li><a href="#">질환별 정보</a></li>
+                                        <li><a href="#">자주찾는질문(FAQ)</a></li>
+                                        <li><a href="#">약 정보</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <!-- dep2 -->
                             <li class="dep1">
-                                <a href="#"><h3>인식개선정보</h3></a>
-                            <div class="dep_inner">
-                                <ul class="dep2">
-                                    <li><a href="#">칼럼</a></li>
-                                    <li><a href="#">회복 수기</a></li>
-                                    <li><a href="#">카드뉴스</a></li>
-                                    <li><a href="#">동영상</a></li>
-                                    <li><a href="#">도움이 되는 정보</a></li>
-                                    <li><a href="#">웹툰</a></li>
-                                </ul>
-                            </div>
+                                <a href="#">
+                                    <h3>인식개선정보</h3>
+                                </a>
+                                <div class="dep_inner">
+                                    <ul class="dep2">
+                                        <li><a href="#">칼럼</a></li>
+                                        <li><a href="#">회복 수기</a></li>
+                                        <li><a href="#">카드뉴스</a></li>
+                                        <li><a href="#">동영상</a></li>
+                                        <li><a href="#">도움이 되는 정보</a></li>
+                                        <li><a href="#">웹툰</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <!-- dep3 -->
                             <li class="dep1">
-                                <a href="#"><h3>정신건강관련기관</h3></a>
-                            <div class="dep_inner">
-                                <ul class="dep2">
-                                    <li><a href="#">정신건강관련기관</a></li>
-                                    <li><a href="#">유관 기관</a></li>
-                                    <li><a href="#">관련 단체</a></li>
-                                </ul>
-                            </div>
+                                <a href="#">
+                                    <h3>정신건강관련기관</h3>
+                                </a>
+                                <div class="dep_inner">
+                                    <ul class="dep2">
+                                        <li><a href="#">정신건강관련기관</a></li>
+                                        <li><a href="#">유관 기관</a></li>
+                                        <li><a href="#">관련 단체</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <!-- dep4 -->
                             <li class="dep1">
-                                <a href="#"><h3>정신건강통계</h3></a>
-                            <div class="dep_inner">
-                                <ul class="dep2">
-                                    <li><a href="#">정신건강통계</a></li>
-                                </ul>
-                            </div>
+                                <a href="#">
+                                    <h3>정신건강통계</h3>
+                                </a>
+                                <div class="dep_inner">
+                                    <ul class="dep2">
+                                        <li><a href="#">정신건강통계</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <!-- dep5 -->
                             <li class="dep1">
-                                <a href="#"><h3>소개/알림</h3></a>
-                            <div class="dep_inner">
-                                <ul class="dep2">
-                                    <li><a href="#">소개</a></li>
-                                    <li><a href="#">이용안내</a></li>
-                                    <li><a href="#">공지사항</a></li>
-                                    <li><a href="#">설문조사</a></li>
-                                    <li><a href="#">이벤트</a></li>
-                                </ul>
-                            </div>
+                                <a href="#">
+                                    <h3>소개/알림</h3>
+                                </a>
+                                <div class="dep_inner">
+                                    <ul class="dep2">
+                                        <li><a href="#">소개</a></li>
+                                        <li><a href="#">이용안내</a></li>
+                                        <li><a href="#">공지사항</a></li>
+                                        <li><a href="#">설문조사</a></li>
+                                        <li><a href="#">이벤트</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <!-- dep6 -->
                         </ul>
@@ -103,24 +119,38 @@
         <main>
             <div class="section1">
                 <div class="inner df">
-                    <div class="main_banner">
-                        <div class="slides">
-                            <div class="slide1"></div>
-                            <div class="slide2"></div>
-                            <div class="slide3"></div>
-                            <div class="slide4"></div>
-                            <div class="slide5"></div>
-                            <div class="slide6"></div>
-                            <div class="popupzone">
-                                <p>팝업존</p>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper df">
+                            <div class="swiper-slide">
+                                <img src="./imgs/banner1.jpg" alt="banner">
                             </div>
+                            <div class="swiper-slide">
+                                <img src="./imgs/banner2.jpg" alt="banner">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./imgs/banner3.jpg" alt="banner">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./imgs/banner4.png" alt="banner">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./imgs/banner5.jpg" alt="banner">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./imgs/banner6.jpg" alt="banner">
+                            </div>
+                        </div>
+                        <div class="popupzone">
+                            <p>팝업존</p>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                     <div class="section1_content">
                         <div class="search">
                             <label for="searchData"></label>
-                            <input type="text" name="searchData" class="search_box" placeholder="정신건강 정보를 찾아보세요."
-                            title="검색어 입력">
+                            <input type="text" name="searchData" class="search_box" placeholder="정신건강 정보를 찾아보세요." title="검색어 입력">
                             <input type="submit" value="검색" class="search_btn">
                         </div>
                         <div class="cardbox1 df">
@@ -138,11 +168,15 @@
                         <div class="cardbox2 df">
                             <div class="card3 df">
                                 <img src="./imgs/main_quick_card03.png" alt="icon">
-                                <a href="#"><p>정신건강 질환별 정보</p></a>
+                                <a href="#">
+                                    <p>정신건강 질환별 정보</p>
+                                </a>
                             </div>
                             <div class="card4 df">
                                 <img src="./imgs/main_quick_card04.png" alt="icon">
-                                <a href="#"><p>정신건강관련기관</p></a>
+                                <a href="#">
+                                    <p>정신건강관련기관</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -158,42 +192,50 @@
                         <ul class="icons df">
                             <li>
                                 <a href="#">
-                                    <img src="./imgs/main_sec02_icon01.png" alt=""><p>카드뉴스</p>
+                                    <img src="./imgs/main_sec02_icon01.png" alt="">
+                                    <p>카드뉴스</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./imgs/main_sec02_icon02.png" alt=""><p>웹툰</p>
+                                    <img src="./imgs/main_sec02_icon02.png" alt="">
+                                    <p>웹툰</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./imgs/main_sec02_icon03.png" alt=""><p>동영상</p>
+                                    <img src="./imgs/main_sec02_icon03.png" alt="">
+                                    <p>동영상</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./imgs/main_sec02_icon04.png" alt=""><p>통계</p>
+                                    <img src="./imgs/main_sec02_icon04.png" alt="">
+                                    <p>통계</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./imgs/main_sec02_icon05.png" alt=""><p>도움이 되는 정보</p>
+                                    <img src="./imgs/main_sec02_icon05.png" alt="">
+                                    <p>도움이 되는 정보</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./imgs/main_sec02_icon06.png" alt=""><p>칼럼</p>
+                                    <img src="./imgs/main_sec02_icon06.png" alt="">
+                                    <p>칼럼</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./imgs/main_sec02_icon07.png" alt=""><p>FAQ</p>
+                                    <img src="./imgs/main_sec02_icon07.png" alt="">
+                                    <p>FAQ</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="./imgs/main_sec02_icon08.png" alt=""><p>약정보</p>
+                                    <img src="./imgs/main_sec02_icon08.png" alt="">
+                                    <p>약정보</p>
                                 </a>
                             </li>
                         </ul>
@@ -202,43 +244,43 @@
             </div>
             <div class="section3 inner df">
                 <div class="sub_banner">
-                        <div class="top df">
-                            <div class="text">
-                                <h3><b>인식개선</b>정보</h3>
-                            </div>
-                            <div class="bar df">
-                                <div class="prev"><i class="fa-solid fa-angle-left"></i></div>
-                                <div class="next"><i class="fa-solid fa-angle-right"></i></div>
-                            </div>
+                    <div class="top df">
+                        <div class="text">
+                            <h3><b>인식개선</b>정보</h3>
                         </div>
-                        <div class="bottom">
-                            <div class="slide">
-                                <div class="slide1"></div>
-                                <div class="slide2"></div>
-                                <div class="slide3"></div>
-                                <div class="slide4"></div>
-                            </div>
+                        <div class="bar df">
+                            <div class="prev"><i class="fa-solid fa-angle-left"></i></div>
+                            <div class="next"><i class="fa-solid fa-angle-right"></i></div>
                         </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="slide">
+                            <div class="slide1"></div>
+                            <div class="slide2"></div>
+                            <div class="slide3"></div>
+                            <div class="slide4"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="news">
+                    <div class="notice_txt">
+                        <h3>정신건강포털 <b>새소식</b></h3>
+                    </div>
+                    <div class="notice df">
+                        <div class="day">
+                            <p>2024.02</p>
+                            <h3>26</h3>
+                        </div>
                         <div class="notice_txt">
-                            <h3>정신건강포털 <b>새소식</b></h3>
+                            <p>재난 대응인력 소진관리 프로그램 신청 안내</p>
                         </div>
-                        <div class="notice df">
-                            <div class="day">
-                                <p>2024.02</p>
-                                <h3>26</h3>
-                            </div>
-                            <div class="notice_txt">
-                                <p>재난 대응인력 소진관리 프로그램 신청 안내</p>
-                            </div>
-                        </div>
-                        <ul class="list">
-                            <li><a href="#">국립정신건강센터 갤러리M ´마음을 그리다 II´ 이주환·하경이 2인전 개최<span>2024.02.20</span></a></li>
-                            <li><a href="#">2024 재난심리지원 국제세미나<span>2024.01.08</span></a></li>
-                            <li><a href="#">국립정신건강센터 '마음이음 힐링 콘서트(My Healing Concert)' 개최 안내<span>2023.11.29</span></a></li>
-                            <li><a href="#">정신건강의날 기념 MIND 퀴즈 이벤트<span>2023.10.01</span></a></li>
-                        </ul>
+                    </div>
+                    <ul class="list">
+                        <li><a href="#">국립정신건강센터 갤러리M ´마음을 그리다 II´ 이주환·하경이 2인전 개최<span>2024.02.20</span></a></li>
+                        <li><a href="#">2024 재난심리지원 국제세미나<span>2024.01.08</span></a></li>
+                        <li><a href="#">국립정신건강센터 '마음이음 힐링 콘서트(My Healing Concert)' 개최 안내<span>2023.11.29</span></a></li>
+                        <li><a href="#">정신건강의날 기념 MIND 퀴즈 이벤트<span>2023.10.01</span></a></li>
+                    </ul>
                 </div>
             </div>
             <div class="section4">
@@ -249,26 +291,40 @@
                     </div>
                     <ul class="iconbox df">
                         <li><a href="#">
-                            <div class="icon"><img src="./imgs/main_sec04_icon01.png" alt="icon"></div>
-                        </a><p>정신건강정보신청</p></li>
+                                <div class="icon"><img src="./imgs/main_sec04_icon01.png" alt="icon"></div>
+                            </a>
+                            <p>정신건강정보신청</p>
+                        </li>
                         <li><a href="#">
-                            <div class="icon"><img src="./imgs/main_sec04_icon02.png" alt="icon"></div>
-                        </a><p>정신건강복지센터</p></li>
+                                <div class="icon"><img src="./imgs/main_sec04_icon02.png" alt="icon"></div>
+                            </a>
+                            <p>정신건강복지센터</p>
+                        </li>
                         <li><a href="#">
-                            <div class="icon"><img src="./imgs/main_sec04_icon03.png" alt="icon"></div>
-                        </a><p>자살예방센터</p></li>
+                                <div class="icon"><img src="./imgs/main_sec04_icon03.png" alt="icon"></div>
+                            </a>
+                            <p>자살예방센터</p>
+                        </li>
                         <li><a href="#">
-                            <div class="icon"><img src="./imgs/main_sec04_icon04.png" alt="icon"></div>
-                        </a><p>중독관리통합<br>지원센터</p></li>
+                                <div class="icon"><img src="./imgs/main_sec04_icon04.png" alt="icon"></div>
+                            </a>
+                            <p>중독관리통합<br>지원센터</p>
+                        </li>
                         <li><a href="#">
-                            <div class="icon"><img src="./imgs/main_sec04_icon05.png" alt="icon"></div>
-                        </a><p>정신요양시설</p></li>
+                                <div class="icon"><img src="./imgs/main_sec04_icon05.png" alt="icon"></div>
+                            </a>
+                            <p>정신요양시설</p>
+                        </li>
                         <li><a href="#">
-                            <div class="icon"><img src="./imgs/main_sec04_icon06.png" alt="icon"></div>
-                        </a><p>정신의료기관</p></li>
+                                <div class="icon"><img src="./imgs/main_sec04_icon06.png" alt="icon"></div>
+                            </a>
+                            <p>정신의료기관</p>
+                        </li>
                         <li><a href="#">
-                            <div class="icon"><img src="./imgs/main_sec04_icon07.png" alt="icon"></div>
-                        </a><p>기관지도찾기</p></li>
+                                <div class="icon"><img src="./imgs/main_sec04_icon07.png" alt="icon"></div>
+                            </a>
+                            <p>기관지도찾기</p>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -304,5 +360,9 @@
             </div>
         </footer>
     </div>
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>
