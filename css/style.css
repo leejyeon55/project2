@@ -81,6 +81,9 @@
   top: 100px;
   z-index: 9999;
 }
+.w100.on{
+  box-shadow: 3px 30px 30px rgba(0,0,0,0.05);
+}
 .gnb {
   justify-content: space-between;
   align-items: center;
@@ -116,8 +119,10 @@
   position: relative;
 }
 .gnb nav .hamberger a i{
+  position: relative;
    font-size: 24px;
    color: #fff;
+   z-index: 2;
 }
 .gnb nav .hamberger a::before{
    content: '';
@@ -128,7 +133,7 @@
    height: 50px;
    background: #228eff;
    border-radius: 50%;
-   z-index: -1;
+   z-index: 1;
 }
 .gnb nav .main_nav li.dep1 {
   padding-left: 50px;
@@ -156,6 +161,9 @@
    font-family: "Pretendard";
    color: #222;
    display: flex;
+   word-break: break-all;
+   overflow: hidden;
+   text-align: start;
  }
 
 
@@ -163,7 +171,7 @@
  ======= ham nav ======
 ==================================== */
 .ham_nav{
-  z-index: 99;
+  z-index: 999;
   display: none;
   position: absolute;
   top: 100px;
@@ -174,7 +182,20 @@
   margin: 0 auto;
   text-align: center;
 }
-.on{
+.ham_nav::before{
+  content: '';
+  position: absolute;
+  top: -150px;
+  bottom: 0;
+  left: -171px;
+  right: 0;
+  background: #fff;
+  opacity: .1;
+  width: 200%;
+  height: 1000px;
+  z-index: 1;
+}
+.ham_nav.on{
   display: block;
 }
 .ham_nav .ham_dep{
@@ -184,6 +205,8 @@
   border: 1px solid #e8e8e8;
   background-color: #fff;
   box-shadow: 3px 30px 30px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 90;
 }
 .ham_nav .ham_dep .th1{
   display: table-cell;
@@ -224,8 +247,9 @@
 }
 .btn_x{
   position: absolute;
-  top: -18px;
-  right: -10px;
+  top: -19px;
+  right: -11px;
+  z-index: 90;
 }
 /* ====================================
  ======= section1 ======

@@ -11,6 +11,7 @@ dep1.on({
 		dep2.stop().fadeIn(200);
 		bg.stop().animate({ height: maxH + 80 }, 500);
 		$('.gnb_area').css('border','none');
+		bg.addClass('on')
 	},
 	mouseleave: function () {
 		dep2.stop().fadeOut(200);
