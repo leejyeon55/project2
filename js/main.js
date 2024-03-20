@@ -19,19 +19,7 @@ dep1.on({
 	},
 });
 
-//slide1
-
-// let swiper = new Swiper(".mySwiper", {
-//   pagination: {
-// 	el: ".swiper-pagination",
-// 	type: "fraction",
-//   },
-//   navigation: {
-// 	nextEl: ".swiper-button-next",
-// 	prevEl: ".swiper-button-prev",
-//   },
-// });
-
+//스와이퍼1
 let swiper = new Swiper(".mySwiper", {
 	slidesPerView: 1,
 	spaceBetween: 30,
@@ -42,7 +30,7 @@ let swiper = new Swiper(".mySwiper", {
 	  clickable: true,
 	  renderFraction: function (currentClass, totalClass) {
 		return '<span class="' + currentClass + '"></span>' +
-			' ㅡ ' + // 원하는 문자로 변경
+			' ㅡ ' + 
 			   '<span class="' + totalClass + '"></span>';
 	  }
 	},
@@ -55,3 +43,13 @@ let swiper = new Swiper(".mySwiper", {
         disableOnInteraction: false,
       },
   });
+
+//햄버거메뉴 열기 / 닫기 
+const ham = $('.hamberger');
+const btnX = $('.btn_x');
+ham.on('click',function (){
+	$('.ham_nav').addClass('on');
+})
+btnX.on('click',function (){
+	$('.ham_nav').removeClass('on');
+})
