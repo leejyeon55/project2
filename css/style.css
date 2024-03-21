@@ -160,12 +160,17 @@
    font-size: 17px;
    font-family: "Pretendard";
    color: #222;
-   display: flex;
-   word-break: break-all;
-   overflow: hidden;
+   display: block;
    text-align: start;
+   white-space: nowrap ;
  }
-
+ .gnb nav .main_nav .dep2 .long a{
+  margin-top: 14px;
+  line-height: 20px;
+ }
+ .gnb nav .main_nav .dep2 .long~li a{
+  line-height: 22px;
+ }
 
 /* ====================================
  ======= ham nav ======
@@ -254,6 +259,20 @@
 /* ====================================
  ======= section1 ======
 ==================================== */
+/* 스크롤 애니메이션 */
+.scroll_wrap {
+  overflow: hidden;
+}
+.scroll_on {
+  opacity: 0;
+  transition: all 1s;
+}
+.scroll_on.type_bottom {
+  position: relative;
+  top: 60px;
+  transform: translate(0, -50px);
+  opacity: 1;
+}
 .section1 {
   width: 100%;
   padding: 70px 0px 200px;
@@ -272,6 +291,8 @@
   height: 100%;
   z-index: -1;
 }
+
+/* swiper-main */
 .mySwiper {
   width: 60%;
   max-width: 890px;
@@ -286,6 +307,54 @@
   /* object-fit: cover; */
   border-radius: 20px;
 }
+/* swiper-btn */
+.swiper-pagination-fraction{
+  top: 20px !important;
+  left:95px !important;
+  width: 30% !important;
+}
+.swiper-button-prev i{
+  color: #fff;
+  position: absolute;
+  z-index: 5;
+  right: -180px;
+}
+.swiper-button-next i{
+  color: #fff;
+  position: absolute;
+  z-index: 5;
+  right: 29px;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after{
+  display: none;
+}
+
+.swiper-pause{
+  position: absolute;
+  z-index: 5;
+  top: 22px;
+  right: 59px;
+  cursor: pointer;
+}
+.swiper-pause span{
+  font-size: 16px;
+}
+.swiper-play{
+  position: absolute;
+  z-index: 5;
+  top: 23px;
+  right: 55px;
+  cursor: pointer;
+  display: none;
+}
+.swiper-play.btnon{
+  display: block;
+}
+.btnon{
+  display: none;
+}
+
 .popupzone {
   position: absolute;
   content: "";
@@ -294,7 +363,7 @@
   background: #0e3799;
   border-radius: 0 20px 0 20px;
   padding: 20px 30px;
-  bottom: 3px;
+  bottom: 1px;
   left: 0;
   z-index: 5;
 }
@@ -550,6 +619,8 @@
 }
 .sub_banner {
   padding-top: 56px;
+  width: 38%;
+  position: relative;
 }
 .sub_banner .top {
   justify-content: space-between;
@@ -565,66 +636,69 @@
 .sub_banner .top .text b {
   color: var(--primary1);
 }
-.sub_banner .top .bar {
-  width: 90px;
-  height: 40px;
-  justify-content: space-between;
+.MySwiper{
+  /* position: relative; */
+  /* overflow: hidden; */
+  border-radius: 20px;
 }
-.sub_banner .top .bar .prev,
-.sub_banner .top .bar .next {
+.MySwiper .swiper-slide img{
+  background-size: cover;
+}
+
+/* 서브 배너 스와이퍼 버튼 css */
+.bottom .swiper-button-next,
+.bottom .swiper-button-prev,
+.bottom .swiper-play,
+.bottom .swiper-pause{
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background: #fff;
   border: 1px solid #eee;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 5;
 }
-.sub_banner .top .bar i {
-  position: relative;
-  font-size: 20px;
-  line-height: 38px;
-  color: var(--text1);
-  left: 13px;
+.bottom .swiper-button-next{
+  top: 74px;
+  right: 0;
 }
-.sub_banner .bottom .slide {
-  overflow: hidden;
-  position: relative;
-  border-radius: 20px;
-  width: 578px;
-  height: 405px;
+.bottom .swiper-button-next i{
+  color: #222;
+  font-size: 18px;
+  top: 10px;
+  right: 13px;
 }
-.sub_banner .bottom .slide .slide1 {
-  width: 100%;
-  height: 100%;
-  background: url(../imgs/snbbanner1.jpg) 100% center no-repeat;
-  border-radius: 20px;
-  background-size: 100%;
+.bottom .swiper-button-prev{
+  top: 74px;
+  left: 444px;
 }
-/* .sub_banner .bottom .slide .slide2 {
- width: 100%;
- height: 100%;
- background: url(../imgs/snbbanner1.jpg) no-repeat;
- border-radius: 20px;
- background-size: 100%;
- }
-.sub_banner .bottom .slide .slide3 {
- width: 100%;
- height: 100%;
- background: url(../imgs/snbbanner1.jpg) no-repeat;
- border-radius: 20px;
- background-size: 100%;
- }
-.sub_banner .bottom .slide .slide4 {
- width: 100%;
- height: 100%;
- background: url(../imgs/snbbanner1.jpg) no-repeat;
- border-radius: 20px;
- background-size: 100%;
- }
-*/
+.bottom .swiper-button-prev i{
+  color: #222;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
+}
+.bottom .swiper-play,
+.bottom .swiper-pause{
+  top: 52px;
+  right: 46px;
+}
+.bottom .swiper-play span,
+.bottom .swiper-pause span{
+  color: #222;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+}
+
+
+
 .news {
   border: 16px solid #fff1f3;
   border-radius: 30px;
   padding: 40px 50px 50px;
+  width: 60%;
+  max-width: 870px;
 }
 .news .notice_txt {
   margin-bottom: 20px;
@@ -850,6 +924,7 @@ footer > .inner {
 .site {
   max-width: 220px;
   width: 100%;
+  cursor: pointer;
 }
 .footer_bottom .site > li {
   border: 1px solid #444;
@@ -863,23 +938,33 @@ footer > .inner {
   line-height: 50px;
   font-size: 15px;
 }
-.footer_bottom .site li i {
+.footer_bottom .site li .fa-chevron-up {
   float: right;
   line-height: 50px;
   padding-right: 20px;
   font-size: 15px;
 }
+.footer_bottom .site li .fa-chevron-down {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  line-height: 50px;
+  font-size: 15px;
+  display: none;
+}
+
 .site .site_inner {
   display: none;
 }
-.site > li:hover .site_inner {
+.site_inner.up {
   display: block;
+  transition: transform .5s;
 }
 .site_inner > li {
   background: #000;
   border: none;
   position: absolute;
-  top: -52px;
+  top: 0;
   left: 0;
 }
 .site .site_inner > li a {
