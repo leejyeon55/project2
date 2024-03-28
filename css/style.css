@@ -498,11 +498,13 @@ body {
 .card2 {
   min-height: 428px;
   padding: 10px;
-  background: url(../imgs/main_quick_card02.png) var(--bg2);
+  background: url(../imgs/main_quick_card02.png) 100% var(--bg2);
+  background-size: 120%;
 }
 .card2:hover {
-  background: url(../imgs/main_quick_card02.png) right bottom no-repeat #00b6bd;
+  background: url(../imgs/main_quick_card02.png) 100% bottom no-repeat #00b6bd;
   transform: translateY(-10px);
+  background-size: 100%;
 }
 .card3, .card4 {
   border: 2px solid #fff;
