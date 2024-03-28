@@ -1,5 +1,56 @@
+
+// popup
+$(".popup>span").on("click", function () {
+	$(".popup").css('display','none');
+  });
+
+//gnb 스티키메뉴
+      $( document ).ready( function() {
+        let gndFiexd = $( '.gnb_area' ).offset();
+        $( window ).scroll( function() {
+          if ( $( document ).scrollTop() > gndFiexd.top ) {
+            $( '.gnb_area' ).addClass( 'fixed' );
+			$( '.logo1' ).addClass( 'fixed' );
+          }
+
+          else {
+            $( '.gnb_area' ).removeClass( 'fixed' );
+			$( '.logo1' ).removeClass( 'fixed' );
+          }
+        });
+      } );
+//반응형 gnb 햄버거메뉴
+$('.top_nav > .fa-bars').on('click',function () {
+	$('.sm_ham_btn').addClass('left');
+	$('.back').addClass('in');
+})
+$('.sm_ham_top .fa-xmark').on('click',function () {
+	$('.sm_ham_btn').removeClass('left');
+	$('.back').removeClass('in');
+})
+
+// const dep2 = $('.sm_ham_btn>.dep1>.dep2');
+// const dep2Li = $('.sm_ham_btn>.dep1>.dep2>li');
+// const dep2A=$('.sm_ham_btn>.dep1>.dep2>li>a');
+
+// $('.sm_ham_btn>.dep1').on('click',function(e){
+// 	e.preventDefault();
+// 	let menuTg=$(this);
+// 	let hamH = dep2Li.innerHeight();
+// 	let hamLen=menuTg.find(dep2A).length;
+// 	let tTH=hamH * hamLen;
+// 	if(menuTg.find(dep2).outerHeight() > 0){
+// 		menuTg.find(dep2).outerHeight(0);
+// 	}else {
+// 		dep2.outerHeight(0);
+// 		menuTg.find(dep2).outerHeight(tTH);
+// 	}
+// })
+
+
+
 //nav
-$(()=>{
+$(() => {
 	let maxH;
 	let bg = $('.w100');
 	const dep1 = $('.dep1');
@@ -9,137 +60,135 @@ $(()=>{
 	});
 	dep1.on({
 		mouseenter: function () {
-			dep2.stop().fadeIn(200);
-			bg.stop().animate({ height: maxH + 80 }, 500);
-			$('.gnb_area').css('border','none');
-			bg.addClass('on')
+			dep2.stop().delay(200).fadeIn(0);
+			bg.stop().animate({ height: maxH + 100 }, 300);
+			$('.gnb_area').css('border-bottom', '1px solid transparent');
+			bg.addClass('on');
 		},
 		mouseleave: function () {
-			dep2.stop().fadeOut(200);
-			bg.stop().animate({ height: 0 }, 500);
-			$('.gnb_area').css('border-bottom','1px solid #e8e8e8');
+			dep2.stop().fadeOut(0);
+			bg.stop().animate({ height: 0 }, 0);
+			$('.gnb_area').css('border-bottom', '1px solid #e8e8e8');
 		},
 	});
 
-//햄버거메뉴 열기 / 닫기 
-const ham = $('.hamberger');
-const btnX = $('.btn_x');
-ham.on('click',function (){
-	$('.ham_nav').addClass('on');
-})
-btnX.on('click',function (){
-	$('.ham_nav').removeClass('on');
-})
-
-})
+	//햄버거메뉴 열기 / 닫기
+	const ham = $('.hamberger');
+	const btnX = $('.btn_x');
+	ham.on('click', function () {
+		$('.ham_nav').addClass('btn');
+	});
+	btnX.on('click', function () {
+		$('.ham_nav').removeClass('btn');
+	});
+});
 //배너 스와이퍼
-$(()=>{let swiper = new Swiper(".mySwiper", {
-	slidesPerView: 1,
-	spaceBetween: 30,
-	loop: true,
-	pagination: {
-	  el: ".swiper-pagination",
-	  type: "fraction",
-	  clickable: true,
-	  formatFractionCurrent: function (number) {
-		return ('0' + number).slice(-2);
-	},
-	formatFractionTotal: function (number) {
-		return ('0' + number).slice(-2);
-	},
-	renderFraction: function (currentClass, totalClass) {
-		return '<span class="' + currentClass + '"></span>' +
-			   ' ㅡ ' +
-			   '<span class="' + totalClass + '"></span>';
-	}
-	},
-	navigation: {
-	  nextEl: ".swiper-button-next",
-	  prevEl: ".swiper-button-prev",
-	},
-	autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
- 
-	
-	
-});
-let Myswiper = new Swiper(".MySwiper", {
-	slidesPerView: 1,
-	spaceBetween: 30,
-	loop: true,
-	navigation: {
-	  nextEl: ".swiper-button-next",
-	  prevEl: ".swiper-button-prev",
-	},
-	autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
- 
-	
-	
-});
+$(() => {
+	let swiper = new Swiper('.mySwiper', {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction',
+			clickable: true,
+			formatFractionCurrent: function (number) {
+				return ('0' + number).slice(-2);
+			},
+			formatFractionTotal: function (number) {
+				return ('0' + number).slice(-2);
+			},
+			renderFraction: function (currentClass, totalClass) {
+				return '<span class="' + currentClass + '"></span>' + ' ㅡ ' + '<span class="' + totalClass + '"></span>';
+			},
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+	});
+	let Myswiper = new Swiper('.MySwiper', {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+	});
 
+	//스와이퍼 슬라이드 재생멈춤버튼
 
-//스와이퍼 슬라이드 재생멈춤버튼
-
-$('.popupzone .swiper-pause').on('click',function () {
+	$('.popupzone .swiper-pause').on('click', function () {
 		$('.popupzone .swiper-pause').addClass('btnon');
 		$('.popupzone .swiper-play').addClass('btnon');
 		swiper.autoplay.stop();
-
+	});
+	$('.popupzone .swiper-play').on('click', function () {
+		$('.popupzone .swiper-play').removeClass('btnon');
+		$('.popupzone .swiper-pause').removeClass('btnon');
+		swiper.autoplay.start();
+	});
+	//배너 스와이프
+	$('.bottom .swiper-pause').on('click', function () {
+		$('.bottom .swiper-pause').addClass('btnon');
+		$('.bottom .swiper-play').addClass('btnon');
+		Myswiper.autoplay.stop();
+	});
+	$('.bottom .swiper-play').on('click', function () {
+		$('.bottom .swiper-play').removeClass('btnon');
+		$('.bottom .swiper-pause').removeClass('btnon');
+		Myswiper.autoplay.start();
+	});
 });
-$('.popupzone .swiper-play').on('click',function () {
-	$('.popupzone .swiper-play').removeClass('btnon');
-	$('.popupzone .swiper-pause').removeClass('btnon');
-	swiper.autoplay.start();
-});
-//배너 스와이프
-$('.bottom .swiper-pause').on('click',function () {
-	$('.bottom .swiper-pause').addClass('btnon');
-	$('.bottom .swiper-play').addClass('btnon');
-	Myswiper.autoplay.stop();
-
-});
-$('.bottom .swiper-play').on('click',function () {
-$('.bottom .swiper-play').removeClass('btnon');
-$('.bottom .swiper-pause').removeClass('btnon');
-Myswiper.autoplay.start();
-});
-
-})
-
 
 //스크롤 애니메이션
-$(document).ready(function() {
-    const counters = $(".scroll_on");
-    const exposurePercentage = 50;
-    const loop = true;
 
-    // 윈도우의 스크롤 모니터링
-    $(window).on('scroll', function() {
-        counters.each(function() {
-            const el = $(this);
-            const rect = el[0].getBoundingClientRect();
-            const winHeight = window.innerHeight;
-            const contentHeight = rect.bottom - rect.top;
-            if (rect.top <= winHeight - (contentHeight * exposurePercentage / 100) && rect.bottom >= (contentHeight * exposurePercentage / 100)) {
-                el.addClass('type_bottom');
-            }
-            if (loop && (rect.bottom <= 0 || rect.top >= window.innerHeight)) {
-                el.removeClass('type_bottom');
-            }
-        });
-    }).scroll();
+const counters = $('.scroll_on');
+const exposurePercentage = 50;
+let loop = true;
+const win = $(window);
+// 윈도우의 스크롤 모니터링
+win.on('scroll', function () {
+	const winST = win.scrollTop();
+	counters.each(function () {
+		const el = $(this);
+		const rectT = el.offset().top - 1000;
+		if (rectT < winST) {
+			el.addClass('type_bottom');
+			loop = false;
+		}
+	});
 });
 
-//푸터 관련사이트 클릭
-const site = $('.site')
-site.on('click',function () {
-	$('.site_inner').addClass('up')
-	$('.site_inner').css('transform','translateY(-102px)');
-	$('.fa-chevron-down').css('display','block');
-	$('.fa-chevron-up').css('display','none')
-})
+$(document).ready(function() {
+    $('.site > a').on('click', function(event){
+        event.preventDefault();
+        $('.site > ul').stop().slideToggle();
+        $('.site').stop().toggleClass('up');
+        // 아이콘 상태 토글
+        if ($('.fa-chevron-up').is(':visible')) {
+            $('.fa-chevron-up').hide();
+            $('.fa-chevron-down').show();
+        } else {
+            $('.fa-chevron-up').show();
+            $('.fa-chevron-down').hide();
+        }
+    });
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('.site').length) {
+            $('.site > ul').stop().slideUp();
+            $('.fa-chevron-up').show();
+            $('.fa-chevron-down').hide();
+        }
+    });
+});
+
